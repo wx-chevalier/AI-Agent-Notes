@@ -94,35 +94,23 @@ from langchain.prompts import PromptTemplate
 
 # 初始化ChatOpenAI模型
 
-
 llm = ChatOpenAI(model_name="gpt - 3.5 - turbo", temperature=0.7)
 
 # 创建提示模板，定义模型的输入格式
 
 
 prompt = PromptTemplate(
-
-
    input_variables=["question"],
-
-
    template="请回答这个问题：{question}"
 
 )
 
 
 # 创建语言模型链，将提示模板与模型结合
-
-
 chain = LLMChain(llm=llm, prompt=prompt)
 
-
 # 运行链，向模型提问
-
-
 response = chain.run("什么是人工智能？")
-
-
 print(response)
 ```
 
@@ -134,9 +122,7 @@ print(response)
 
 ```py
 from langchain_community.tools import DuckDuckGoSearchRun
-
 from langchain_community.chat_models import ChatOpenAI
-
 from langchain.agents import initialize_agent, AgentType
 
 # 实例化DuckDuckGo搜索工具，作为agent可用的工具之一
@@ -144,27 +130,16 @@ from langchain.agents import initialize_agent, AgentType
 
 search = DuckDuckGoSearchRun()
 
-
 tools = [search]
-
 
 # 创建一个LLM（大型语言模型）客户端，连接到DeepSeek的OpenAI兼容接口
 
 
 llm = ChatOpenAI(
-
-
    model='deepseek - chat',
-
-
    openai_api_key="你的API密钥",
-
-
    openai_api_base='https://api.deepseek.com',
-
-
    max_tokens=1024
-
 )
 
 
@@ -201,7 +176,7 @@ print(response)
 
 ### （二）对超长文本进行总结
 
-```
+```py
 from langchain.document_loaders import TextLoader
 
 from langchain.text_splitter import CharacterTextSplitter
@@ -214,37 +189,21 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain.chat_models import ChatOpenAI
 
 # 加载文档
-
-
 loader = TextLoader('your_long_text_file.txt')
-
 
 documents = loader.load()
 
-
 # 文本分割
-
-
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-
-
 texts = text_splitter.split_documents(documents)
 
-
 # 初始化语言模型和总结链
-
-
 llm = ChatOpenAI(temperature=0)
-
-
 chain = load_summarize_chain(llm, chain_type="map_reduce")
 
 
 # 运行总结链
-
-
 summary = chain.run(texts)
-
 
 print(summary)
 ```
