@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈玉楼大师 - 命理咨询</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- 引入字体图标 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box">
+            <div class="chat-header">
+                <img src="/static/images/img.png" alt="陈玉楼大师" class="avatar">
+                <div class="header-info">
+                    <h2>陈玉楼大师</h2>
+                    <p>不诚不算,不疑不算,不义不算</p>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- 欢迎消息 -->
+                <div class="message bot-message">
+                    老夫陈玉楼，精通阴阳五行，能算命、紫薇斗数、姓名测算、占卜凶吉，看命运八字。年轻时也曾经走南闯北，遍历中华山河大地。请问阁下有何指教？
+                    当然，现今日新月异，如果问我一些奇怪的问题，老夫也需借助外力，请帮老夫翻墙。
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <textarea id="userInput" placeholder="请输入您的问题..."></textarea>
+                <button id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载动画 -->
+    <div class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html> 

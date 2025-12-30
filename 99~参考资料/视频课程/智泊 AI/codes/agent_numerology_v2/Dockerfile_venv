@@ -1,0 +1,18 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# 复制本地虚拟环境
+COPY .venv /app/.venv
+
+# 复制项目文件
+COPY . .
+
+# 设置环境变量使用虚拟环境
+ENV PATH="/app/.venv/bin:$PATH"
+
+# 暴露端口
+EXPOSE 8000
+
+# 启动命令
+CMD ["python", "server.py"]

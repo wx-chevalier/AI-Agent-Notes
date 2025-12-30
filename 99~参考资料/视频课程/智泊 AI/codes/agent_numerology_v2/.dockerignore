@@ -1,0 +1,9 @@
+__pycache__
+*.pyc
+.git
+.gitignore
+README.md
+.DS_Store
+.env
+local_qdrand/
+交互范例文本.md
