@@ -1,4 +1,4 @@
-> [2025~Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
+> [2025_Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
 
 # Building effective agents
 
