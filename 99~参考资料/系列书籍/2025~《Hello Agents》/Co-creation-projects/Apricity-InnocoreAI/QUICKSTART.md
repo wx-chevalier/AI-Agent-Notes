@@ -79,7 +79,7 @@ innocore_ai/
 
 ## 📚 更多信息
 
-- 详细文档: [README.md](README.md)
+- 详细文档: [README.md](02~算法/02~大模型/Agent/AI-Agent-Notes/99~参考资料/系列书籍/2025~《Hello%20Agents》/Co-creation-projects/Apricity-InnocoreAI/README.md)
 - API文档: http://localhost:8000/docs
 - 配置示例: [.env.example](.env.example)
 
