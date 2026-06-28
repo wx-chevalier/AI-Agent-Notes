@@ -12,7 +12,7 @@
 
 *基于 HelloAgent 框架构建，支持灵活的 LLM 切换*
 
-[English](README_EN.md) | 简体中文
+[English](00~认知/Awesome-Methodologies/README_en.md) | 简体中文
 
 </div>
 
